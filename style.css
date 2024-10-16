@@ -1,0 +1,17 @@
+div{
+   height: 200px;
+   width: 200px;
+   background-color: antiquewhite;
+   display: inline-block;
+   border: 2px solid black;
+}
+
+#box4{
+    position: sticky;
+    top: 0px;
+}
+.container{
+    height: 1000px;
+    width: 1000px;
+    background-color: yellow;
+}
