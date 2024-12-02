@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complaint Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            background-color: #3a3005;
+           
+        }
+        .pageDetails{
+            color: #e4dbb6;
+            padding-right: 100px;
+            nav{
+                background-color: #433705;
+                box-shadow: 10px 10px 5px black;
+            }
+            ul{
+                display: flex;
+                list-style-type: none;
+                li{
+                    padding: 10px;
+                }
+            }
+        }
+
+        .form-container {
+            width: 700px;
+            padding-left: 250px;
+            padding-bottom: 50px;
+            padding-right: 10px;
+            background-color:#e4dbb6;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 50% 0 0 50%;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        fieldset {
+            border: none;
+            padding: 0;
+            margin: 0;
+            
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
+        }
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        input, select, textarea, button {
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        textarea {
+            resize: vertical;
+        }
+        .hidden {
+            display: none;
+        }
+      
+        .preview-section {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+   
+            <svg width="410px" height="800px">
+            <circle cx="50px" cy="50px" r="30px" stroke="#e4dbb6" fill="none" stroke-width="2"/>
+            <circle cx="53px" cy="53px" r="30px" stroke="#e4dbb6" fill="none" stroke-width="2"/>
+            <circle cx="50px" cy="56px" r="30px" stroke="#e4dbb6" fill="none" stroke-width="2"/>
+            <circle cx="56px" cy="56px" r="30px" stroke="#e4dbb6" fill="none" stroke-width="2"/>
+            <circle cx="56px" cy="50px" r="30px" stroke="#e4dbb6" fill="none" stroke-width="2"/>
+            <text x="40" y="59" fill="white">Crime Report Beureau</text>
+        </svg>
+        <div class="pageDetails">
+            <div><nav>
+                <ul class="navbar">
+                    <li>Home</li>
+                    <li>About us</li>
+                    <li>Complaint Report</li>
+                    <li>Track Complaint</li>
+                    <li>Contact</li>
+                    </ul>
+    
+            </nav></div>
+        <h1>Check list for Complainant</h1>
+        <h4>Please keep this information ready before filing your complaint:</h4>
+        <h3>Mandatory Information</h3>
+        <ol>
+            <li>Incident Date and Time.</li>
+            <li>Incident details (minimum 200 characters) without any special characters (#$@^*`’’~|!).</li>
+            <li>Soft copy of any national Id ( Voter Id, Driving license, Passport, PAN Card, Aadhar Card) of complainant in .jpeg, .jpg, .png format (file size should not more than 5 MB).</li>
+            <li> <b>In case of financial fraud, please keep following information ready:</b>
+                <ol type="i">
+                    <li>Name of the Bank/ Wallet/Merchant</li>
+                    <li>12-digit Transaction id/UTR No.</li>
+                    <li>Date of transaction</li>
+                    <li>Fraud amount</li>
+                    <li>Soft copy of all the relevant evidences related to the cyber crime (not more than 10 MB each)</li>
+                </ol>
+            </li>
+        </ol>
+    </div>
+    <div class="form-container">
+        <h2>Complaint Form</h2>
+        <form id="complaintForm" action="" method="">
+            <fieldset>
+                <!-- Personal Information -->
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your Full Name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="xxxxxxx@gmail.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="1234567890" required>
+                </div>
+
+                <!-- Complaint Type -->
+                <div class="form-group">
+                    <label for="complaint_type">Type of Complaint:</label>
+                    <select id="complaint_type" name="complaint_type" required onchange="showAdditionalFields()">
+                        <option value="">--Select--</option>
+                        <option value="service">Missing people</option>
+                        <option value="product">Missing items</option>
+                        <option value="staff">Fraud</option>
+                        <option value="other">Murder</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <!-- Product Details (Conditional) -->
+                <div id="productDetails" class="form-group hidden">
+                    <label for="product_name">Product Name:</label>
+                    <input type="text" id="product_name" name="product_name">
+                </div>
+                <div id="productSerial" class="form-group hidden">
+                    <label for="product_serial">Product Serial Number:</label>
+                    <input type="text" id="product_serial" name="product_serial">
+                </div>
+
+                <!-- Complaint Description -->
+                <div class="form-group">
+                    <label for="description">Complaint Description:</label>
+                    <textarea id="description" name="description" rows="4"  required></textarea>
+                    
+                </div>
+
+                <!-- Desired Resolution -->
+                <div class="form-group">
+                    <label for="resolution">Desired Resolution:</label>
+                    <textarea id="resolution" name="resolution" rows="3"></textarea>
+                </div>
+
+                <!-- Preview Button -->
+                <div class="form-group">
+                    <button type="button" onclick="previewComplaint()">Preview Complaint</button>
+                </div>
+
+                <!-- Preview Section -->
+                <div id="previewSection" class="preview-section hidden">
+                    <h3>Complaint Preview</h3>
+                    <p><strong>Name:</strong> <span id="previewName"></span></p>
+                    <p><strong>Email:</strong> <span id="previewEmail"></span></p>
+                    <p><strong>Phone:</strong> <span id="previewPhone"></span></p>
+                    <p><strong>Complaint Type:</strong> <span id="previewType"></span></p>
+                    <p><strong>Description:</strong> <span id="previewDescription"></span></p>
+                    <p><strong>Desired Resolution:</strong> <span id="previewResolution"></span></p>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="form-group">
+                    <button type="submit">Submit Complaint</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+
+    
+</body>
+<script src="script.js">
+    </script>
+</html>

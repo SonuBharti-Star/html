@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h2>भारत सरकार || GOVERNMENT OF INDIA</h2>
+        <a href="login.html"><i class="fa-solid fa-id-card  idcard"></i></a>
+    </header>
+    <marquee behavior="" direction="">Login as above for generating various reports. सूचना दें, कर्तव्य निभाएं !</marquee>
+    <div class="slideshow-container"> 
+        <img class="slides" src="images\image1.jpeg" alt="Image 1"> 
+        <img class="slides" src="images\image2.jpg" alt="Image 2"> 
+        <img class="slides" src="images\image3.jpeg" alt="Image 3"> 
+    </div>
+    <div class="container">
+     <div class="container1">
+        <div class="box"></div>
+        <div class="box"><a href="">CRIME <br>REPORT <br>BUREAU</a></div>
+        <div class="box"><a href="">FAQ</a></div>
+        <div class="box"><a href="">SAFETY <br> TIPS</a></div>
+        <div class="box"><a href="">T&C</a></div>
+    </div>
+    <div class="container2">
+        <nav>
+            <ul class="navbar">
+           <li><div><a href="">Home</a></div></li>
+           <li><div><a href="">About us</a></div></li>
+           <li><div class="cat">Complaint Report
+            <ul class="lists">
+                <li><div class="missing">Missing 
+                    <ul class="missing-lists">
+                        <li><a href="form.html">Missing People</a></li>
+                        <li><a href="form.html">Missing Things</a></li>
+                    </ul></div>
+                </li>
+                <li><a href="form.html">Murder</a></li>
+                <li><a href="form.html">Accidents</a></li>
+                <li><a href="form.html">Harrassment</a></li>
+                <li><a href="form.html">Cyber Crime</a></li>
+            </ul></div>
+        </li>
+           <li><div><a href="">Track Complaint</a></div></li>
+           <li><div><a href="">Search</a></div></li>
+           <li><div><a href="">Contact</a></div></li>
+        </ul>
+        </nav>
+        <div class="crimeCard">
+            <div class="card"><img src="images\women.png" alt=""><h3>Women/Children related Crime</h3><button class="complaint" onclick="openForm()">Register a complaint</button></div>
+            <div class="card"><img src="images\finance.webp" alt=""> <h3>Financial Fraud</h3><button class="complaint" onclick="openForm()">Register a complaint</button></div>
+            <div class="card"><img src="images\other.png" alt=""><h3>Other Crime</h3><button class="complaint" onclick="openForm()">Register a complaint</button></div>
+        </div>
+
+        <center><h2>LEARNING CORNER</h2></center>
+        <div class="learn"><h4>CITIZEN MANUAL</h4>
+            <p>It is a document to describe the functionalities and workflow that is provided to citizens on the cybercrime portal for reporting cybercrimes.</p>
+            <a href="manual.html">Read More</a>
+        </div>
+
+    </div>
+    <div class="container3">
+        <button id="tip"><img class="image" src="images\crime1.jpeg" alt=""></button>      
+        <img class="image" src="images\crime2.jpeg" alt="">
+    </div>
+    </div>
+    <footer>
+        <a href="">Feedback </a>|
+        <a href="">Privacy Policy </a>|
+        <a href="">Website Policy </a>|
+        <a href="">Disclaimer </a>|
+        <a href=""><img src="images\insta.png" alt="" class="logo"> </a>
+        <a href=""><img src="images\facebook.avif" alt="" class="logo"> </a>
+        <a href=""><img src="images\x.jpeg" alt="" class="logo"> </a>
+        <a href="https://www.linkedin.com/in/smritikumari2608"><img src="images\linkedin.jpeg" alt="" class="logo"> </a>
+        <a href=""><img src="images\telegram.jpeg" alt="" class="logo"> </a>
+        <a href=""><img src="images\whatsapp.jpeg" alt="" class="logo"> </a>
+        <a href=""><img src="images\mail.jpeg" alt="" class="logo"> </a>
+    </footer>
+    
+    <div class="open">
+        <button id="close"><i class="fa-solid fa-square-xmark fa-2x" class="close"></i></button>
+        <div class="popup">
+            
+            <div><img src="images\tips-icon-png-5.jpg" alt="" height="150px" width="150px"></div>
+            <div class="tip"><h3>Write a tip or any concern</h3>
+                <textarea name="" id="tip" rows="7"></textarea>
+                <button type="submit" title="submit" id="submit">submit</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
